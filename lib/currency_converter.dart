@@ -11,9 +11,9 @@ class CurrencyConverter extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Hello",
+              "0",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 45,
                 fontWeight: FontWeight.bold,
               ),
             ),
