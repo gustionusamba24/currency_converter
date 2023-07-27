@@ -53,22 +53,18 @@ class CurrencyConverter extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(10),
-              child: TextButton(
+              child: ElevatedButton(
                 onPressed: () {
                   if (kDebugMode) {
                     debugPrint("Button clicked");
                   }
                 },
-                style: ButtonStyle(
-                  foregroundColor: const MaterialStatePropertyAll(Colors.white),
-                  backgroundColor: const MaterialStatePropertyAll(Colors.black),
-                  minimumSize: const MaterialStatePropertyAll(
-                    Size(double.infinity, 50),
-                  ),
-                  shape: MaterialStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.black,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
                   ),
                 ),
                 child: const Text("Convert"),
