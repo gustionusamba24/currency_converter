@@ -6,6 +6,8 @@ class CurrencyConverter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int result = 0;
+    final TextEditingController textEditingController = TextEditingController();
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
         width: 2.0,
