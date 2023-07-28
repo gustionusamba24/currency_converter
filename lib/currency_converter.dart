@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyConverter extends StatelessWidget {
@@ -6,7 +5,7 @@ class CurrencyConverter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int result = 0;
+    double result = 0;
     final TextEditingController textEditingController = TextEditingController();
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
@@ -38,6 +37,7 @@ class CurrencyConverter extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: TextField(
+                controller: textEditingController,
                 style: const TextStyle(
                   color: Colors.black,
                 ),
@@ -62,9 +62,7 @@ class CurrencyConverter extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: ElevatedButton(
                 onPressed: () {
-                  if (kDebugMode) {
-                    debugPrint("Button clicked");
-                  }
+                  result = double.parse(textEditingController.text) * 15095.40;
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
