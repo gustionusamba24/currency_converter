@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
-class CurrencyConverter extends StatelessWidget {
-  const CurrencyConverter({super.key});
+class CurrencyConverterPage extends StatefulWidget {
+  State createState() => _CurrencyConverterPageState();
+}
+
+class _CurrencyConverterPageState extends State {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+
+class CurrencyConverterPagee extends StatelessWidget {
+  const CurrencyConverterPagee({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +37,9 @@ class CurrencyConverter extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "0",
-              style: TextStyle(
+            Text(
+              result.toString(),
+              style: const TextStyle(
                 fontSize: 45,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -62,7 +73,7 @@ class CurrencyConverter extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: ElevatedButton(
                 onPressed: () {
-                  result = double.parse(textEditingController.text) * 15095.40;
+                  result = double.parse(textEditingController.text) * 15112.35;
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
