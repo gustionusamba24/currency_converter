@@ -10,15 +10,6 @@ class CurrencyConverterPage extends StatefulWidget {
 class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
-  }
-}
-
-class CurrencyConverterPagee extends StatelessWidget {
-  const CurrencyConverterPagee({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     double result = 0;
     final TextEditingController textEditingController = TextEditingController();
     final border = OutlineInputBorder(
