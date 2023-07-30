@@ -34,20 +34,20 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
         title: const Text("Currency Converter"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'IDR $result',
-              style: const TextStyle(
-                fontSize: 45,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'IDR $result',
+                style: const TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
+              TextField(
                 controller: textEditingController,
                 style: const TextStyle(
                   color: Colors.black,
@@ -68,10 +68,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
                   decimal: true,
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
+              ElevatedButton(
                 onPressed: convert,
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
@@ -82,9 +79,9 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
                   ),
                 ),
                 child: const Text("Convert"),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
