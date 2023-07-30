@@ -33,7 +33,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              result.toString(),
+              'IDR $result',
               style: const TextStyle(
                 fontSize: 45,
                 fontWeight: FontWeight.bold,
@@ -68,10 +68,8 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
               padding: const EdgeInsets.all(10),
               child: ElevatedButton(
                 onPressed: () {
-                  setState(() {
-                    result =
-                        double.parse(textEditingController.text) * 15112.35;
-                  });
+                  result = double.parse(textEditingController.text) * 15112.35;
+                  setState(() {});
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
