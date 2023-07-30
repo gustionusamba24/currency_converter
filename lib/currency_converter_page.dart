@@ -68,6 +68,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
                   decimal: true,
                 ),
               ),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: convert,
                 style: TextButton.styleFrom(
