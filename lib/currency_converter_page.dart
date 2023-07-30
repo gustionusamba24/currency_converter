@@ -68,7 +68,10 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
               padding: const EdgeInsets.all(10),
               child: ElevatedButton(
                 onPressed: () {
-                  result = double.parse(textEditingController.text) * 15112.35;
+                  setState(() {
+                    result =
+                        double.parse(textEditingController.text) * 15112.35;
+                  });
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
